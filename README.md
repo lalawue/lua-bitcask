@@ -2,9 +2,17 @@
 
 # About
 
-lua-bitcask.lua was a Key/Value store for Lua, uses [Bitcask](https://en.wikipedia.org/wiki/Bitcask)  on-disk layout, pure LuaJIT code depends on lfs and crc32.
+lua-bitcask.lua was a Key/Value store for Lua, uses [Bitcask](https://en.wikipedia.org/wiki/Bitcask)  on-disk layout, depends on lfs and crc32.
 
-only test in MacOS/Linux.
+only test in MacOS.
+
+# Install
+
+require [LuaRocks](https://luarocks.org/).
+
+```sh
+$ luarocks install lua-bitcask
+```
 
 # Example
 
@@ -50,7 +58,7 @@ end
 # Test
 
 ```bash
-$ lua test/test_bitcask.lua
+$ lua test_bitcask.lua
 PASS Set/Get
 PASS Delete
 PASS GC
