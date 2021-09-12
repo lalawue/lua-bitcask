@@ -1,7 +1,8 @@
 package = 'lua-bitcask'
-version = 'scm-1'
+version = '0.1.20210912-1'
 source = {
-   url = 'git+https://github.com/lalawue/lua-bitcask.git'
+   url = 'git+https://github.com/lalawue/lua-bitcask.git',
+   tag = '0.1.20210912',
 }
 description = {
    summary = 'Bitcask Key/Value store for Lua',
