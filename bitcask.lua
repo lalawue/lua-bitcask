@@ -302,12 +302,16 @@ function _M:info(key)
     end
     local kinfo = self._buckets[self._bucket_name].kinfo
     if kinfo == nil then
-        return nil
+        return false
+    end
+    local info = kinfo[key]
+    if info == nil then
+        return false
     end
     return {
-        time = kinfo.time,
-        size = kinfo.vsize,
-        crc32 = kinfo.crc32
+        time = info.time,
+        size = info.vsize,
+        crc32 = info.crc32
     }
 end
 
