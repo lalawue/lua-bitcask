@@ -509,7 +509,7 @@ local function _opendb(config)
     ins._config = {}
     ins._config.dir = config.dir
     ins._config.file_size = config.file_size or (64 * 1024 * 1024) -- 64M default
-    ins._bucket_name = "0"
+    ins._bucket_name = config.bucket or "0"
     ins._buckets = {}
     --[[
         ins structure as
