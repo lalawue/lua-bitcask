@@ -77,6 +77,9 @@ end
 local function _activeFid(self, bucket_name)
     bucket_name = bucket_name or self._bucket_name
     local bucket_info = self._buckets[bucket_name]
+    if not bucket_info then
+        return 0, 0
+    end
     local act_fid = bucket_info.act_fid
     local offset = 0
     while true do
@@ -212,7 +215,7 @@ local function _loadBucketsInfo(self)
             self._buckets[dname].max_fid = max_fid
         end
     end
-    if fNext(self._buckets) == nil then
+    if fNext(self._buckets) == nil or not FileSystem.attributes(path .. "/" .. self._bucket_name) then
         _bucketCreate(self, self._bucket_name)
     end
 end
