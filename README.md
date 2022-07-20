@@ -4,7 +4,7 @@
 
 lua-bitcask.lua was a Key/Value store for Lua, uses [Bitcask](https://en.wikipedia.org/wiki/Bitcask)  on-disk layout, depends on lfs and crc32.
 
-only test in MacOS.
+Test in MacOS/Linux.
 
 # Install
 
